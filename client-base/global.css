@@ -1,0 +1,238 @@
+@import 'src/assets/fonts/index.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --neutral: 0, 0%, 85%;
+
+    --brand-primary: 40, 50%, 59%;
+    --brand-deep: 36, 51%, 38%;
+    --brand-orange: 0 0% 50.2%;
+    --brand-10: 35 4.96% 52.55%;
+
+    --general-dark: 0, 0%, 0%;
+    --general-light: 0, 0%, 100%;
+    /* --general-light-90: 0 0% 94.9%; /* diff on the light theme ?? */
+    --general-light-90: 0 0% 0%; /* diff on the light theme ?? */
+    --general-light-5: 0 0% 53%; /* diff on the light theme ?? */
+    --general-link: 211, 87%, 69%;
+    --general-label: 186, 65%, 61%;
+
+    --background-primary: 228, 12%, 8%;
+    --background-secondary: 220, 10%, 12%;
+    --background-weekend: 0, 2%, 17%;
+    --background-weekday: 0, 0%, 29%;
+    --background-active: 213, 4%, 41%;
+    --background-disabled: 38, 3%, 52%;
+    --background-table: 228, 25%, 4%, 0.7;
+
+    --form-button-bg: 240, 8%, 12%;
+    --form-input-primary: 240, 4%, 16%;
+    --form-input-secondary: 240, 4%, 23%;
+
+    --positive-primary: 148, 68%, 50%;
+    --positive-secondary: 166, 45%, 49%;
+    --positive-tertiary: 148, 68%, 50%; /* diff on the light theme ?? */
+
+    --negative-primary: 19, 100%, 50%;
+    --negative-secondary: 0, 87%, 65%;
+    --negative-background: 19, 100%, 50%; /* diff on the light theme ?? */
+
+    --status-bullish: 166, 71%, 65%;
+    --status-bearish: 32, 71%, 65%;
+    --status-cancelled: 338, 100%, 69%;
+
+    --user-expert: 32, 78%, 50%;
+    --user-analyst: 43, 79%, 54%;
+    --user-investor: 212, 77%, 82%;
+
+    --notification-error: 347, 98%, 60%;
+    --notification-info: 187, 86%, 57%;
+
+    --graph-border-primary: 220, 4%, 20%;
+    --graph-closed-line: 39, 58%, 57%;
+
+    --table-divider: 228 5.62% 17;
+
+    --filter-border: 220, 3%, 33%;
+
+    --placeholder-bg: 0, 3%, 64%;
+
+    --counter-btn-bg: 240, 9%, 12%;
+
+    --tag-bg: 0, 0%, 96%, 0.13;
+
+    --cancel-bg: 324, 100%, 89%;
+
+    /* // PLATE EDITOR VARS */
+    --background: 0, 0%, 0%;
+    --foreground: 210 40% 98%;
+
+    --muted: 240, 8%, 12%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --popover: 0, 0%, 0%;
+    --popover-foreground: 210 40% 98%;
+
+    --card: 0, 0%, 0%;
+    --card-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 240, 8%, 12%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 217.2 32.6% 17.5%;
+
+    --toolbar: 240, 4%, 16%;
+  }
+
+  /* TODO: add light theme colors */
+  :root[data-theme='light'] {
+    --neutral: 0, 0%, 85%;
+
+    --brand-primary: 40, 50%, 59%;
+    --brand-deep: 36, 51%, 38%;
+    --brand-orange: 0 0% 50.2%;
+    --brand-10: 35 4.96% 52.55%;
+
+    --general-dark: 0, 0%, 100%;
+    --general-light: 0, 0%, 0%;
+    --general-light-90: 0 0% 94.9%; /* diff on the light theme ?? */
+    --general-light-5: 0 0% 53%; /* diff on the light theme ?? */
+    --general-link: 211, 87%, 69%;
+    --general-label: 186, 65%, 61%;
+
+    --background-primary: 33, 43%, 92%;
+    --background-secondary: 33, 53%, 96%;
+    --background-weekend: 0, 2%, 17%;
+    --background-weekday: 0, 0%, 29%;
+    --background-active: 213, 4%, 41%;
+    --background-disabled: 38, 3%, 52%;
+    --background-table: 33, 53%, 96%; /* same as --background-secondary */
+
+    --form-button-bg: 30, 56%, 96%;  /* TODO which color should be?*/
+    --form-input-primary: 30, 32%, 88%;
+    --form-input-secondary: 30, 32%, 88%; /* TODO which color should be?*/
+
+    --positive-primary: 148, 68%, 50%;
+    --positive-secondary: 166, 45%, 49%;
+    --positive-tertiary: 148, 68%, 50%; /* diff on the light theme ?? */
+
+    --negative-primary: 19, 100%, 50%;
+    --negative-secondary: 0, 87%, 65%;
+    --negative-background: 19, 100%, 50%; /* diff on the light theme ?? */
+
+    --status-bullish: 166, 71%, 65%;
+    --status-bearish: 32, 71%, 65%;
+    --status-cancelled: 338, 100%, 69%;
+
+    --user-expert: 32, 78%, 50%;
+    --user-analyst: 43, 79%, 54%;
+    --user-investor: 212, 77%, 82%;
+
+    --notification-error: 347, 98%, 60%;
+    --notification-info: 187, 86%, 57%;
+
+    --graph-border-primary: 220, 4%, 20%;
+    --graph-closed-line: 39, 58%, 57%;
+
+    --table-divider: 228 5.62% 17;
+
+    --filter-border: 220, 3%, 33%;
+
+    --placeholder-bg: 0, 3%, 64%;
+
+    --counter-btn-bg: 240, 9%, 12%;
+
+    --tag-bg: 0, 0%, 96%, 0.13;
+
+    --cancel-bg: 324, 100%, 89%;
+
+    /* // PLATE EDITOR VARS */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+  
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+  
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+  
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+  
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+  
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+  
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+  
+    --destructive: 0 72.22% 50.59%;
+    --destructive-foreground: 210 40% 98%;
+  
+    --ring: 215 20.2% 65.1%;
+  
+    --radius: 0.5rem;
+
+    --toolbar: 30, 56%, 96%;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: hsl(var(--general-light));
+  background-color: hsl(var(--background-primary));
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* rule to cut 2 lines of text */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

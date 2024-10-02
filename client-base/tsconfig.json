@@ -1,0 +1,20 @@
+{
+  "extends": "src/config-ts/tsconfig.json",
+  "compilerOptions": {
+    "outDir": ".dist/ts",
+    "composite": true,
+    "noEmit": false,
+    "allowImportingTsExtensions": false
+  },
+  "include": [
+    "abstractions",
+    "auth",
+    "constants",
+    "hooks",
+    "logger",
+    "theme",
+    "transport",
+    "ui",
+    "utils"
+  ]
+}
